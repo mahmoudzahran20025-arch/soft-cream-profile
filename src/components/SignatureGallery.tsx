@@ -14,7 +14,7 @@ const galleryItems = [
     { name: "The Berry Contrast", type: "Classic Cone", desc: "Dual-swirl perfection of chocolate and berry", gradient: "from-pink-300 via-rose-400 to-pink-500", image: "/2 soft cone.jpg" },
     { name: "The Mango Gold", type: "Fruit Fusion", desc: "Premium mango concentrate on velvet swirl", gradient: "from-amber-400 via-orange-400 to-yellow-600", image: "/535851837_752835087717591_2736394710090213703_n.jpg" },
     { name: "The Golden Roast", type: "Italian Espresso", desc: "Bold aroma, crafted for fusion", gradient: "from-amber-700 via-stone-700 to-amber-900", image: "/affogato.png" },
-    { name: "The Sovereign Swirl", type: "Classic Soft Serve", desc: "Where it all begins. Pure perfection.", gradient: "from-amber-50 via-amber-100 to-yellow-200", image: "/hero.png" },
+    { name: "The Sovereign Swirl", type: "Classic Soft Serve", desc: "Where it all begins. Pure perfection.", gradient: "from-amber-50 via-amber-100 to-yellow-200", image: "/brownie.png" },
     { name: "The Creamy Crown", type: "Qashtota Fusion", desc: "The anchor carrier of indulgence", gradient: "from-yellow-100 via-amber-200 to-orange-100", image: "/hero_dominance.png" },
 ];
 

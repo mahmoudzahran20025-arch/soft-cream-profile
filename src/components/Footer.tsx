@@ -17,8 +17,8 @@ export default function Footer() {
                         </div>
                         <p className="text-gray-400 mb-6">Redefining dessert culture with innovation and Italian craftsmanship.</p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><Instagram size={20} /></a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><Facebook size={20} /></a>
+                            <a href="https://www.instagram.com/soft.cream9/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><Instagram size={20} /></a>
+                            <a href="https://www.facebook.com/Soft.cream9" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"><Facebook size={20} /></a>
                         </div>
                     </div>
 

@@ -42,7 +42,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     className="mb-8 px-5 py-2 border border-primary/50 rounded-full bg-primary/10 backdrop-blur-md"
                 >
-                    <span className="text-xs font-black tracking-[0.3em] uppercase text-primary">Infrastructure Dominance</span>
+                    <span className="text-xs font-black tracking-[0.3em] uppercase text-primary">Category Leader</span>
                 </motion.div>
 
                 {/* Headlines */}
@@ -53,8 +53,8 @@ export default function Hero() {
                         transition={{ delay: 0.3, duration: 1 }}
                         className="text-5xl md:text-[4.5rem] font-black tracking-tight leading-[1.1] text-white"
                     >
-                        The Sovereign of<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-pink-300 italic">Soft Serve Infrastructure</span>
+                        The Next Generation of<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-pink-300 italic">Soft Serve in Egypt</span>
                     </motion.h1>
 
                     <motion.p
@@ -63,7 +63,7 @@ export default function Hero() {
                         transition={{ delay: 0.6, duration: 1 }}
                         className="text-lg md:text-xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed"
                     >
-                        Re-engineering the Egyptian Dairy Experience through <span className="text-white font-semibold">Italian Precision</span> & <span className="text-white font-semibold">Local Soul</span>.
+                        The best of <span className="text-white font-semibold">Italian Soft Serve</span>, made with local Egyptian passion. We're opening new branches fast—come and see how we're changing the dessert game.
                     </motion.p>
                 </div>
 
