@@ -12,7 +12,7 @@ export default function Footer() {
                     {/* Brand Info */}
                     <div>
                         <div className="flex items-center gap-3 mb-6">
-                            <Image src={getAssetPath("/logo.png")} alt="Soft Cream" width={48} height={48} className="rounded-full" />
+                            <Image src={getAssetPath("/logo.png")} alt="Soft Cream" width={48} height={48} className="rounded-full object-cover aspect-square" />
                             <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-primary">Soft Cream</h3>
                         </div>
                         <p className="text-gray-400 mb-6">Redefining dessert culture with innovation and Italian craftsmanship.</p>

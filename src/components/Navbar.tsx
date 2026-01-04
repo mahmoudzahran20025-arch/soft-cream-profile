@@ -36,7 +36,7 @@ export default function Navbar() {
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3 group">
                         <div className="relative">
-                            <Image src={getAssetPath("/logo.png")} alt="Soft Cream" width={44} height={44} className="rounded-full shadow-lg group-hover:shadow-primary/30 transition-shadow" />
+                            <Image src={getAssetPath("/logo.png")} alt="Soft Cream" width={44} height={44} className="rounded-full shadow-lg group-hover:shadow-primary/30 transition-shadow object-cover aspect-square" />
                             <motion.div
                                 animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
                                 transition={{ duration: 2, repeat: Infinity }}
