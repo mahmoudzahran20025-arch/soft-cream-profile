@@ -103,11 +103,11 @@ export default function FusionCarriers() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="relative h-[400px] rounded-[48px] overflow-hidden group shadow-2xl"
                     >
-                        <Image src={getAssetPath("/brownie.png")} alt="Warm & Cold Fusion" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
+                        <Image src={getAssetPath("/554678932_779520495049050_1777938225994126955_n.jpg")} alt="Molten Cake Fusion" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-10">
-                            <div className="bg-primary/90 text-white text-[10px] font-black px-4 py-1 rounded-full w-fit mb-4 uppercase tracking-[.3em]">Hero Interaction</div>
-                            <h3 className="text-3xl font-bold text-white mb-2">Warm & Cold Fusion</h3>
-                            <p className="text-gray-300 text-sm">Thermal contrast creates unforgettable sensory experiences.</p>
+                            <div className="bg-primary/90 text-white text-[10px] font-black px-4 py-1 rounded-full w-fit mb-4 uppercase tracking-[.3em]">Signature Carrier</div>
+                            <h3 className="text-3xl font-bold text-white mb-2">The Lava Fusion</h3>
+                            <p className="text-gray-300 text-sm">Our Signature Molten Cake engineered for thermal contrast.</p>
                         </div>
                     </motion.div>
 

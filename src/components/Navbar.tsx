@@ -45,7 +45,7 @@ export default function Navbar() {
                         </div>
                         <div className="flex flex-col">
                             <motion.span
-                                className={`font-black text-xl tracking-tighter transition-colors relative overflow-hidden ${scrolled ? 'text-gray-900' : 'text-white'}`}
+                                className={`font-black text-2xl tracking-tighter transition-colors relative overflow-hidden ${scrolled ? 'text-primary' : 'text-primary'}`}
                             >
                                 Soft Cream
                                 <motion.div
@@ -54,7 +54,7 @@ export default function Navbar() {
                                     transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                                 />
                             </motion.span>
-                            <span className={`block text-[10px] font-bold uppercase tracking-[0.2em] ${scrolled ? 'text-primary' : 'text-primary'}`}>Investor Profile</span>
+                            <span className={`block text-[10px] font-bold uppercase tracking-[0.2em] ${scrolled ? 'text-gray-900' : 'text-white/90'}`}>Investor Profile</span>
                         </div>
                     </a>
 

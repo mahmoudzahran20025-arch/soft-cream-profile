@@ -23,8 +23,8 @@ export default function Hero() {
                     className="w-full h-full"
                 >
                     <Image
-                        src={getAssetPath("/hero_dominance.png")}
-                        alt="Soft Cream Category Dominance"
+                        src={getAssetPath("/maadi_front 1.jpg")}
+                        alt="Soft Cream Maadi Flagship"
                         fill
                         className="object-cover opacity-70"
                         priority

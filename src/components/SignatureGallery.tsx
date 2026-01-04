@@ -7,12 +7,15 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
 
+import { getAssetPath } from "@/lib/utils";
+import Image from "next/image";
+
 const galleryItems = [
-    { name: "The Silk Flow", type: "Premium Milkshake", desc: "Velvety smooth, churned fresh to order", gradient: "from-pink-300 via-rose-400 to-pink-500", emoji: "🥤" },
-    { name: "The Golden Roast", type: "Italian Espresso", desc: "Bold aroma, crafted for fusion", gradient: "from-amber-700 via-stone-700 to-amber-900", emoji: "☕" },
-    { name: "The Sovereign Swirl", type: "Classic Soft Serve", desc: "Where it all begins. Pure perfection.", gradient: "from-amber-50 via-amber-100 to-yellow-200", emoji: "🍦" },
-    { name: "The Thermal Kiss", type: "Nutella Tajin", desc: "Warmth meets cold in a delightful embrace", gradient: "from-amber-800 via-rose-800 to-stone-900", emoji: "🍫" },
-    { name: "The Creamy Crown", type: "Qashtota Fusion", desc: "The anchor carrier of indulgence", gradient: "from-yellow-100 via-amber-200 to-orange-100", emoji: "👑" },
+    { name: "The Berry Contrast", type: "Classic Cone", desc: "Dual-swirl perfection of chocolate and berry", gradient: "from-pink-300 via-rose-400 to-pink-500", image: "/2 soft cone.jpg" },
+    { name: "The Mango Gold", type: "Fruit Fusion", desc: "Premium mango concentrate on velvet swirl", gradient: "from-amber-400 via-orange-400 to-yellow-600", image: "/535851837_752835087717591_2736394710090213703_n.jpg" },
+    { name: "The Golden Roast", type: "Italian Espresso", desc: "Bold aroma, crafted for fusion", gradient: "from-amber-700 via-stone-700 to-amber-900", image: "/affogato.png" },
+    { name: "The Sovereign Swirl", type: "Classic Soft Serve", desc: "Where it all begins. Pure perfection.", gradient: "from-amber-50 via-amber-100 to-yellow-200", image: "/hero.png" },
+    { name: "The Creamy Crown", type: "Qashtota Fusion", desc: "The anchor carrier of indulgence", gradient: "from-yellow-100 via-amber-200 to-orange-100", image: "/hero_dominance.png" },
 ];
 
 export default function SignatureGallery() {
@@ -52,20 +55,29 @@ export default function SignatureGallery() {
                     >
                         {galleryItems.map((item, i) => (
                             <SwiperSlide key={i} className="!w-[300px] !h-[420px]">
-                                <div className={`w-full h-full bg-gradient-to-b ${item.gradient} rounded-[40px] p-8 flex flex-col justify-between relative overflow-hidden shadow-2xl`}>
+                                <div className={`w-full h-full bg-gradient-to-b ${item.gradient} rounded-[40px] flex flex-col justify-between relative overflow-hidden shadow-2xl group`}>
+                                    {/* Product Image */}
+                                    <Image
+                                        src={getAssetPath(item.image)}
+                                        alt={item.name}
+                                        fill
+                                        className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"
+                                    />
+
                                     {/* Overlay */}
-                                    <div className="absolute inset-0 bg-black/10 pointer-events-none" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none z-10" />
 
-                                    {/* Top Content */}
-                                    <div className="relative z-10">
-                                        <span className="text-6xl drop-shadow-xl block mb-4">{item.emoji}</span>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-white/70 block">{item.type}</span>
-                                    </div>
-
-                                    {/* Bottom Content */}
-                                    <div className="relative z-10">
-                                        <h3 className="text-2xl font-black text-white mb-2 italic">{item.name}</h3>
-                                        <p className="text-sm text-white/80">{item.desc}</p>
+                                    {/* Content */}
+                                    <div className="relative z-20 p-8 mt-auto">
+                                        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-primary bg-primary/10 backdrop-blur-md px-3 py-1 rounded-full mb-3 inline-block border border-primary/20">
+                                            {item.type}
+                                        </span>
+                                        <h3 className="text-3xl font-black text-white italic tracking-tighter mb-2 drop-shadow-lg">
+                                            {item.name}
+                                        </h3>
+                                        <p className="text-sm text-gray-200 leading-relaxed font-medium drop-shadow-md italic">
+                                            {item.desc}
+                                        </p>
                                     </div>
                                 </div>
                             </SwiperSlide>

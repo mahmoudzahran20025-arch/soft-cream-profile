@@ -2,11 +2,14 @@
 import { motion } from "framer-motion";
 import { MapPin, Building2, Palmtree, Briefcase, PartyPopper, Gem } from "lucide-react";
 
+import { getAssetPath } from "@/lib/utils";
+import Image from "next/image";
+
 const locations = [
-    { name: "Maadi", icon: Building2, status: "Flagship", desc: "The birthplace of innovation" },
-    { name: "Downtown", icon: Building2, status: "Active", desc: "Heart of Cairo's commerce" },
-    { name: "Zamalek", icon: Gem, status: "Premium", desc: "A-Class residential hub" },
-    { name: "North Coast (Sahel)", icon: Palmtree, status: "Seasonal", desc: "Elite summer destination" },
+    { name: "Maadi", icon: Building2, status: "Flagship", desc: "The birthplace of innovation", image: "/maadi_front 1.jpg" },
+    { name: "Downtown", icon: Building2, status: "Active", desc: "Heart of Cairo's commerce", image: "/downtownfront.jpg" },
+    { name: "Zamalek", icon: Gem, status: "Premium", desc: "A-Class residential hub", image: "/zamalek branch.jpg" },
+    { name: "North Coast (Sahel)", icon: Palmtree, status: "Seasonal", desc: "Elite summer destination", image: "/hero_dominance.png" },
 ];
 
 export default function StrategicLocations() {
@@ -35,12 +38,24 @@ export default function StrategicLocations() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
-                                className="bg-white p-8 rounded-[32px] border border-gray-100 shadow-sm text-center group hover:shadow-xl transition-shadow"
+                                className="relative h-[300px] rounded-[32px] overflow-hidden group shadow-lg hover:shadow-2xl transition-all"
                             >
-                                <loc.icon size={36} className="mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
-                                <h4 className="font-bold text-xl text-gray-900 mb-1">{loc.name}</h4>
-                                <span className="text-[10px] font-black uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">{loc.status}</span>
-                                <p className="text-sm text-gray-500 mt-3">{loc.desc}</p>
+                                <Image
+                                    src={getAssetPath(loc.image)}
+                                    alt={loc.name}
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 p-6 flex flex-col justify-end">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <loc.icon size={20} className="text-primary" />
+                                        <h4 className="font-bold text-xl text-white">{loc.name}</h4>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-[9px] font-black uppercase tracking-widest text-primary bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full border border-primary/30">{loc.status}</span>
+                                        <span className="text-[10px] text-gray-300 font-medium">{loc.desc}</span>
+                                    </div>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
