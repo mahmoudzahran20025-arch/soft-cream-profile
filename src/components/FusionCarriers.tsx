@@ -65,7 +65,7 @@ export default function FusionCarriers() {
                             className={`relative p-8 rounded-[40px] ${carrier.visual} overflow-hidden group min-h-[350px] flex flex-col justify-end`}
                         >
                             {/* Steam/Flow Animation for Thermal */}
-                            {carrier.name === "Nutella Tajin" && (
+                            {carrier.name === "Brownies" && (
                                 <motion.div
                                     animate={{ opacity: [0.1, 0.3, 0.1], y: [-10, -30, -10] }}
                                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -79,15 +79,15 @@ export default function FusionCarriers() {
                             </div>
 
                             {/* Icon */}
-                            <carrier.icon size={40} className={`mb-4 ${carrier.name === "Nutella Tajin" ? "text-white" : "text-primary"}`} />
+                            <carrier.icon size={40} className={`mb-4 ${carrier.name === "Brownies" ? "text-white" : "text-primary"}`} />
 
-                            <span className={`text-[10px] font-black uppercase tracking-widest mb-1 ${carrier.name === "Nutella Tajin" ? "text-amber-300" : "text-primary/70"}`}>{carrier.subtitle}</span>
-                            <h3 className={`text-2xl font-bold mb-3 ${carrier.name === "Nutella Tajin" ? "text-white" : "text-gray-900"}`}>{carrier.name}</h3>
-                            <p className={`text-sm mb-6 leading-relaxed ${carrier.name === "Nutella Tajin" ? "text-white/80" : "text-gray-600"}`}>{carrier.desc}</p>
+                            <span className={`text-[10px] font-black uppercase tracking-widest mb-1 ${carrier.name === "Brownies" ? "text-amber-300" : "text-primary/70"}`}>{carrier.subtitle}</span>
+                            <h3 className={`text-2xl font-bold mb-3 ${carrier.name === "Brownies" ? "text-white" : "text-gray-900"}`}>{carrier.name}</h3>
+                            <p className={`text-sm mb-6 leading-relaxed ${carrier.name === "Brownies" ? "text-white/80" : "text-gray-600"}`}>{carrier.desc}</p>
 
                             <div className="flex flex-wrap gap-2">
                                 {carrier.tags.map(tag => (
-                                    <span key={tag} className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter ${carrier.name === "Nutella Tajin" ? "bg-white/20 text-white" : "bg-white/80 text-gray-800"}`}>
+                                    <span key={tag} className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter ${carrier.name === "Brownies" ? "bg-white/20 text-white" : "bg-white/80 text-gray-800"}`}>
                                         {tag}
                                     </span>
                                 ))}
