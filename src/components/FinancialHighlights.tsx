@@ -114,20 +114,23 @@ export default function FinancialHighlights() {
                             </div>
                         </motion.div>
 
-                        <motion.div
+                        <motion.a
+                            href="https://wa.me/201007543497?text=I%20am%20interested%20in%20the%20Soft%20Cream%20Investment%20Opportunity"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="bg-primary p-10 rounded-[48px] flex items-center justify-between group cursor-pointer"
+                            className="bg-primary p-10 rounded-[48px] flex items-center justify-between group cursor-pointer hover:bg-primary/90 transition-colors"
                         >
                             <div>
                                 <h4 className="text-2xl font-black uppercase text-black italic">Investment Prospect</h4>
-                                <p className="text-black/80 font-medium">Download Full Technical PDF & Margin Analysis</p>
+                                <p className="text-black/80 font-medium">Contact us on WhatsApp for Full Details</p>
                             </div>
                             <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                                 <TrendingUp size={30} />
                             </div>
-                        </motion.div>
+                        </motion.a>
                     </div>
                 </div>
             </div>
