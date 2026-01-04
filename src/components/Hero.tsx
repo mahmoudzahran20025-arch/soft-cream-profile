@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Factory, MapPin, TrendingUp } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const badges = [
     { icon: Factory, label: "Standardized Mixes", desc: "Zero-Dependency Supply Chain" },
@@ -22,7 +23,7 @@ export default function Hero() {
                     className="w-full h-full"
                 >
                     <Image
-                        src="/hero_dominance.png"
+                        src={getAssetPath("/hero_dominance.png")}
                         alt="Soft Cream Category Dominance"
                         fill
                         className="object-cover opacity-70"

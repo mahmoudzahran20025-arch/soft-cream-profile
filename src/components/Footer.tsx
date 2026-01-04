@@ -1,5 +1,7 @@
 "use client";
-import { QrCode, Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
+import { QrCode, Instagram, Facebook, Mail, Phone, MapPin, MessageCircle, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Footer() {
     return (

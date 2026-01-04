@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, Menu, X, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,24 +28,33 @@ export default function Navbar() {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${scrolled
-                        ? 'bg-white/90 backdrop-blur-2xl shadow-lg shadow-black/5'
-                        : 'bg-transparent'
+                    ? 'bg-white/90 backdrop-blur-2xl shadow-lg shadow-black/5'
+                    : 'bg-transparent'
                     }`}
             >
                 <div className="container mx-auto px-6 py-4 flex items-center justify-between">
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3 group">
                         <div className="relative">
-                            <Image src="/logo.png" alt="Soft Cream" width={44} height={44} className="rounded-full shadow-lg group-hover:shadow-primary/30 transition-shadow" />
+                            <Image src={getAssetPath("/logo.png")} alt="Soft Cream" width={44} height={44} className="rounded-full shadow-lg group-hover:shadow-primary/30 transition-shadow" />
                             <motion.div
-                                animate={{ scale: [1, 1.2, 1] }}
+                                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
                                 transition={{ duration: 2, repeat: Infinity }}
-                                className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full"
+                                className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_#D81B60]"
                             />
                         </div>
-                        <div className="hidden sm:block">
-                            <span className={`font-black text-lg ${scrolled ? 'text-gray-900' : 'text-white'} transition-colors`}>Soft Cream</span>
-                            <span className={`block text-[9px] font-bold uppercase tracking-widest ${scrolled ? 'text-primary' : 'text-primary/80'}`}>Investor Profile</span>
+                        <div className="flex flex-col">
+                            <motion.span
+                                className={`font-black text-xl tracking-tighter transition-colors relative overflow-hidden ${scrolled ? 'text-gray-900' : 'text-white'}`}
+                            >
+                                Soft Cream
+                                <motion.div
+                                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12"
+                                    animate={{ x: ['-200%', '200%'] }}
+                                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                                />
+                            </motion.span>
+                            <span className={`block text-[10px] font-bold uppercase tracking-[0.2em] ${scrolled ? 'text-primary' : 'text-primary'}`}>Investor Profile</span>
                         </div>
                     </a>
 
@@ -55,8 +65,8 @@ export default function Navbar() {
                                 key={item.label}
                                 href={item.href}
                                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${scrolled
-                                        ? 'text-gray-600 hover:text-primary hover:bg-primary/5'
-                                        : 'text-white/80 hover:text-white hover:bg-white/10'
+                                    ? 'text-gray-600 hover:text-primary hover:bg-primary/5'
+                                    : 'text-white/80 hover:text-white hover:bg-white/10'
                                     }`}
                             >
                                 {item.label}
@@ -106,7 +116,7 @@ export default function Navbar() {
                             <X size={32} />
                         </button>
 
-                        <div className="space-y-6 text-center">
+                        <div className="space-y-8 text-center flex flex-col items-center">
                             {navItems.map((item, i) => (
                                 <motion.a
                                     key={item.label}
@@ -115,22 +125,22 @@ export default function Navbar() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="block text-3xl font-bold text-white hover:text-primary transition-colors"
+                                    className="block text-4xl font-black text-white hover:text-primary transition-colors tracking-tighter"
                                 >
                                     {item.label}
                                 </motion.a>
                             ))}
 
                             <motion.a
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.4 }}
                                 href={whatsappLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold text-lg mt-8"
+                                className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-5 rounded-[32px] font-bold text-xl mt-4 shadow-2xl shadow-[#25D366]/20"
                             >
-                                <MessageCircle size={20} />
+                                <MessageCircle size={24} />
                                 WhatsApp
                             </motion.a>
                         </div>

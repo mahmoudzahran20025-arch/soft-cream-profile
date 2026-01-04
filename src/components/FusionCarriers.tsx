@@ -2,10 +2,11 @@
 import { motion } from "framer-motion";
 import { Layout, Flame, Droplets, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 const carriers = [
     {
-        name: "Premium Qashtota",
+        name: "Premium Desserts",
         subtitle: "The Sovereign Soak",
         desc: "Our viral milk cake acts as a moist, porous foundation. Watch as the soft serve slowly soaks into every layer, creating richness in every bite.",
         tags: ["Anchor Carrier", "Viral"],
@@ -14,7 +15,7 @@ const carriers = [
         visual: "bg-gradient-to-br from-amber-100 to-yellow-200"
     },
     {
-        name: "Nutella Tajin",
+        name: "Brownies",
         subtitle: "Thermal Contrast Master",
         desc: "Heat meets cold. Warm baked clay pot brownies designed to melt the soft serve into a rich, flowing sauce of indulgence.",
         tags: ["Warm Fusion", "Premium"],
@@ -23,7 +24,7 @@ const carriers = [
         visual: "bg-gradient-to-br from-amber-800 to-rose-900"
     },
     {
-        name: "Fluffy Pancake",
+        name: "Fluffy Pancakes and Waffles",
         subtitle: "The Air-Cell Canvas",
         desc: "Perfectly fluffy structure holds layered soft serve distributions. A masterpiece of texture engineering.",
         tags: ["Breakfast Fusion", "Light"],
@@ -102,7 +103,7 @@ export default function FusionCarriers() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="relative h-[400px] rounded-[48px] overflow-hidden group shadow-2xl"
                     >
-                        <Image src="/brownie.png" alt="Warm & Cold Fusion" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
+                        <Image src={getAssetPath("/brownie.png")} alt="Warm & Cold Fusion" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-10">
                             <div className="bg-primary/90 text-white text-[10px] font-black px-4 py-1 rounded-full w-fit mb-4 uppercase tracking-[.3em]">Hero Interaction</div>
                             <h3 className="text-3xl font-bold text-white mb-2">Warm & Cold Fusion</h3>
@@ -115,7 +116,7 @@ export default function FusionCarriers() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         className="relative h-[400px] rounded-[48px] overflow-hidden group shadow-2xl"
                     >
-                        <Image src="/affogato.png" alt="Specialty Bar" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
+                        <Image src={getAssetPath("/affogato.png")} alt="Specialty Bar" fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                         <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-transparent to-transparent flex flex-col justify-end p-10">
                             <div className="bg-stone-500/90 text-white text-[10px] font-black px-4 py-1 rounded-full w-fit mb-4 uppercase tracking-[.3em]">Margin Booster</div>
                             <h3 className="text-3xl font-bold text-white mb-2">The Espresso Bridge</h3>
